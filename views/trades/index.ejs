@@ -1,0 +1,12 @@
+<% if(currentUser) { %> 
+  <h1>Welcome <%= currentUser.username %> </h1>
+  <% if(currentUser.trades.length > 0) { %> 
+  <% user.trades.forEach((trade) => { %>
+    <h1><%= trade.title %> </h1>
+    <p>- <%= trade.author.username%> </p>
+    <a href="/trades/<%=trade._id%>">View Trade</a>
+  <% }) %> 
+  <% } else { %>
+    <h1>No Trades Found</h1>
+  <% } %> 
+  <% } %> 

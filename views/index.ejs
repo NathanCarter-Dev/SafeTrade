@@ -1,0 +1,12 @@
+<%- include("../partials/header.ejs") %> 
+<% if(currentUser) { %> 
+<p>Welcome <%= currentUser.username %> </p>
+<% } %> 
+<a href="/login">Login</a>
+<a href="/register">Register</a>
+<a href="/trades">Trades</a>
+<a href="/trades/new">Start Trade</a>
+
+<h1>SafePay</h1>
+<%- include("../partials/footer.ejs") %> 
+
