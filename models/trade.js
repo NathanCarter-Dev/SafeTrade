@@ -15,7 +15,8 @@ const tradeSchema = new mongoose.Schema({
     ref: "User"
     },
     username: String
-  }
+  },
+  files: [String]
 })
 
 module.exports = mongoose.model("Trade", tradeSchema)

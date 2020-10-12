@@ -7,6 +7,7 @@ const userSchema = new mongoose.Schema({
   password: String,
   trades: [{type: mongoose.Schema.Types.ObjectId,
            ref: "Trade"}],
+  files: [String],
   picture: String
 })
 

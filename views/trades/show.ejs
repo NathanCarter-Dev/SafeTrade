@@ -1,9 +1,15 @@
 <h1><%= trade.title %> </h1>
 <form ref='uploadForm' 
 id='uploadForm' 
-action='/upload' 
+action='/upload/<%=trade._id%>' 
 method='post' 
 encType="multipart/form-data">
-  <input type="file" name="file" />
-  <input type='submit' value='Upload!' />
+  <input type="file" name="file" id="file">
+  <input type='submit' value='Upload!'>
 </form> 
+<% if(trade.files.length > 0)  { %> 
+<% trade.files.forEach((file) => {%> 
+<a href="/download/<%=file %>">Download: <%=file %></a>
+<a href="/delete/<%=trade._id%>/<%=file%>"><button>Remove File</button></a>
+  <% })  %> 
+<% } %> 

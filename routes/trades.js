@@ -30,7 +30,7 @@ router.post("/trades/new",middleware.isLoggedIn, (req,res) => {
         if(err) {
           res.redirect("back")
         }else {
-
+          //make sure user exists before sending trade, if not prompt the user to retry trade
           if(recipient) {
 
           newTrade.recipient.id = recipient._id

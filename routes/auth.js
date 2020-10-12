@@ -15,6 +15,7 @@ router.post("/register", (req,res) => {
       console.log(err);
       res.redirect("back")
     } else {
+
       passport.authenticate("local")(req, res, () =>{
         // req.flash("success", "User Successfully Registered.");
         res.redirect("/");
