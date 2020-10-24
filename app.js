@@ -25,10 +25,11 @@ app.use(expressSession({
   saveUninitialized: false
 }))
 // connection
- mongoose.connect("mongodb://localhost/safepay", {
-  useNewUrlParser: true,
-  useUnifiedTopology: true
-});
+mongoose.connect("mongodb+srv://Nathan:CocoIsARetard722@cluster0.c38zp.mongodb.net/test", {useNewUrlParser: true, useUnifiedTopology: true});
+//  mongoose.connect("mongodb://localhost/safepay", {
+//   useNewUrlParser: true,
+//   useUnifiedTopology: true
+// });
 
 
 

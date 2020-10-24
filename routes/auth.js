@@ -33,7 +33,7 @@ router.post("/register", (req,res) => {
     successRedirect: "/",
     failureRedirect: "/login",
     failureFlash: 'Invalid username or password',
-    successFlash: `Welcome ${req.user}`
+    successFlash: 'Welcome!'
   }) ,(req, res) =>{
 
   })
