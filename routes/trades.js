@@ -23,11 +23,13 @@ router.post("/trades/new",middleware.isLoggedIn, (req,res) => {
   Trade.create({title: req.body.title}, (err, newTrade) => {
     if(err) {
       console.log(err)
+      req.flash("error", `Trade failed to send to ${req.body.recipient}`)
       res.redirect("back")
     } else {
       //add author to trade
       User.findOne({username: req.body.recipient}, (err, recipient) => {
         if(err) {
+          
           res.redirect("back")
         }else {
           //make sure user exists before sending trade, if not prompt the user to retry trade
@@ -49,10 +51,11 @@ router.post("/trades/new",middleware.isLoggedIn, (req,res) => {
       //put trade into recipients pending trades
       recipient.trades.push(newTrade)
         recipient.save()
-
-        res.redirect("/trades")
+        req.flash("success", `Trade successfully sent to ${newTrade.recipient.username}`)
+        res.redirect(`/trades/${newTrade._id}`)
       });
     } else {
+      req.flash("error", `User ${req.body.recipient} does not exist`)
       res.redirect("back")
     }
   }

@@ -1,12 +1,20 @@
+<%- include("../../partials/header.ejs") %> 
+<link rel="stylesheet" type="text/css" href="../../css/trades.css">
 <% if(currentUser) { %> 
-  <h1>Welcome <%= currentUser.username %> </h1>
+  <h1 class="text-center"><%= currentUser.username %>'s Trades </h1>
   <% if(currentUser.trades.length > 0) { %> 
+    <div class="cards">
   <% user.trades.forEach((trade) => { %>
-    <h1><%= trade.title %> </h1>
-    <p>- <%= trade.author.username%> </p>
-    <a href="/trades/<%=trade._id%>">View Trade</a>
+    <div class="card">
+    <p class="card-title"><%= trade.title %> </p>
+    <p class="card-author">Trade from <%= trade.author.username%> To <%= trade.recipient.username %>  </p>
+    <a class="card-link" href="/trades/<%=trade._id%>">View Trade</a>
+  </div>
   <% }) %> 
+</div>
   <% } else { %>
     <h1>No Trades Found</h1>
   <% } %> 
   <% } %> 
+
+  <%- include("../../partials/footer.ejs") %> 

@@ -17,7 +17,7 @@ router.post("/register", (req,res) => {
     } else {
 
       passport.authenticate("local")(req, res, () =>{
-        // req.flash("success", "User Successfully Registered.");
+        req.flash("success", "User successfully registered");
         res.redirect("/");
       });
     }
@@ -31,13 +31,16 @@ router.post("/register", (req,res) => {
   //Login authentication
   router.post("/login", passport.authenticate("local", {
     successRedirect: "/",
-    failureRedirect: "/login"
+    failureRedirect: "/login",
+    failureFlash: 'Invalid username or password',
+    successFlash: `Welcome ${req.user}`
   }) ,(req, res) =>{
+
   })
 
   router.get("/logout", (req, res) =>{
     req.logOut();
-    // req.flash("success", "Logged Out.")
+    req.flash("success", "Successfully logged out")
     res.redirect("/");
   })
 module.exports = router;

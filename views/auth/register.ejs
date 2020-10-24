@@ -1,11 +1,49 @@
 <%- include("../../partials/header.ejs") %> 
+<link rel="stylesheet" type="text/css" href="../../css/auth.css">
 
-<h1>Sign Up!</h1>
+<link rel="stylesheet" type="text/css" href="../../css/nav.css">
+<link rel="stylesheet" type="text/css" href="../../css/main.css">
+<link rel="stylesheet" type="text/css" href="../../css/Animaster.css">
+<link href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet">
+<nav>
+  <p class="nav-title"><a href="/">SafeTrade.</a></p>
+  <div class="content">
+    <% if(currentUser) { %> 
+      <a class="nav-content" href="#"><%= currentUser.username %></a>
+      <a class="nav-content" href="/trades">Trades</a>
+      <a class="nav-content" href="/trades/new">Start Trade</a>
+      <a class="nav-content" href="/logout">Logout</a>
+      <% } else { %>
+        <a class="nav-content" href="/login">Login</a>
+        <a class="nav-content" href="/register">Register</a>
+      <% } %> 
 
+
+  </div>
+  
+</nav>
+<div class="opacity-0-100 speed-slow container">
+  <div class="flyinleft-100 speed-slow form">
+  <div class="head-title">
+      <h1 class="">Register</h1>
+      <img class="tick-register" src="../../images/tick.png" alt="">
+  </div>
+<h2>Welcome to SafeTrade.</h2>
 <form action="/register" method="POST">
-  <input name="username" type="text" placeholder="John Smith">
-  <input name="password" type="password" placeholder="password">
-  <button>Register</button>
-</form>
+  <label class="lb lb-top">USERNAME
+    <input class="shadow" required name="username" type="text" placeholder="John Smith">
+  </label>
 
+  <label class="lb">PASSWORD
+    <input class="shadow" required name="password" type="password" placeholder="**********">
+  </label>
+  <a href="/register"><button class="floatright speed-fast btn-getstarted mt">Register</button></a>
+  
+</form>
+<p>Already have an account? <a href="/login">Sign in!</a></p>
+</div>
+<img class="flyinright-100 speed-medium img" src="../../images/mediamodifier_cropped_image.png" alt="">
+  
+
+</div>
 <%- include("../../partials/footer.ejs") %> 

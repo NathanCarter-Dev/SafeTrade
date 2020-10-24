@@ -1,3 +1,4 @@
+<%- include("../../partials/header.ejs") %> 
 <h1><%= trade.title %> </h1>
 <form ref='uploadForm' 
 id='uploadForm' 
@@ -13,3 +14,4 @@ encType="multipart/form-data">
 <a href="/delete/<%=trade._id%>/<%=file%>"><button>Remove File</button></a>
   <% })  %> 
 <% } %> 
+<%- include("../../partials/footer.ejs") %> 

@@ -1,0 +1,40 @@
+
+nav {
+  background-color: #73C55E;
+  display: flex;
+  
+}
+.nav-content {
+  color: #2F2E41;
+  font-weight: 800;
+  font-size: 0.96rem;
+  margin-right: 2rem;
+  text-transform: uppercase;
+}
+.nav-title {
+  margin: 1rem 0 0 13.5%;
+  color: #2F2E41;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  font-weight: 800;
+}
+.nav-title a, .nav-title a:active, a:hover,.nav-title a:visited  {
+  color: #2F2E41;
+  text-decoration: none;
+}
+.content {
+  margin: 1rem 13.5%;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+.content a {
+  color: #1D1E21;
+  text-decoration: none;
+}
+.content a:active, a:hover {
+  color: black;
+}
+.content a:visited {
+  color: #2a2b30;
+}

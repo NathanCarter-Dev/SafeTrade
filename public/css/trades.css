@@ -1,0 +1,64 @@
+* {
+  font-family: 'Overpass', sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #F6F6F6;
+}
+h1  {
+  font-weight: 700;
+  color: #1D1E21;
+  margin-top: 2rem;
+  font-size: 55px;
+}
+h2 {
+  font-weight: 500;
+  font-size: 1.5rem;
+  color: #38393F;
+}
+.text-center {
+  text-align: center;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.card {
+  flex: 0 0 21%; /* explanation below */
+  margin: 5px;
+  border-radius: 2rem;
+  height: 500px;
+
+  background-color: #2A2B30;
+}
+.card-title {
+  font-weight: 500;
+  text-align: center;
+  font-size: 1.5rem;
+  color: white;
+ 
+}
+.card-author {
+  font-weight: 500;
+  text-align: center;
+  font-size: 1.5rem;
+  color: white;
+}
+.card-link {
+  text-align: center;
+}
+a {
+  color: white;
+  text-decoration: none;
+}
+a:active, a:hover {
+  color: rgb(180, 180, 180);
+}
+a:visited {
+  color:rgb(180, 180, 180);
+}

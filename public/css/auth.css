@@ -1,0 +1,96 @@
+* {
+  font-family: 'Overpass', sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.img {
+  align-self: center;
+  height: 38vw;
+}
+.container {
+  display: flex;
+  height: 100%;
+  vertical-align: middle;
+  justify-content: center;
+  position: relative;
+}
+.svg {
+  display: inline-block;
+}
+.form {
+  align-self: center;
+}
+.title {
+  align-self: center;
+  display: inline;
+  text-align: center;
+}
+.tick {
+  width: 50%;
+  left: 116px;
+  top: -32px;
+  z-index: -1;
+  position: absolute;
+}
+.tick-open {
+  width: 25%;
+  left: 250px;
+  top: -40px;
+  z-index: -1;
+  position: absolute;
+}
+.tick-register {
+  width: 50%;
+  left: 166px;
+  top: -32px;
+  z-index: -1;
+  position: absolute;
+}
+form {
+  margin-top: 1rem;
+}
+label {
+
+  
+  color: #2F2E41;
+  font-weight: 800;
+}
+input {
+  padding: 1rem;
+  margin-bottom: 1.1rem;
+  background-color: white;
+  border: none;
+  border-radius: 5px;
+  width: 300px;
+  height: 50px;
+  display: block;
+  font-size: 1.4rem;
+}
+input:focus {
+  transition: 0.5s;
+  border: none;
+  outline: none;
+}
+.btn-getstarted {
+  cursor: pointer;
+  width: 11rem;
+  height: 3rem;
+  border-radius: 5px;
+  font-size: 1.4rem;
+  
+  font-weight: 800;
+  color: #F6F6F6;
+  
+  background-color: #2F2E41;
+  margin: auto;
+}
+.btn-getstarted a, .btn-getstarted a:active, a:hover,.btn-getstarted a:visited  {
+  color: white;
+  text-decoration: none;
+}
+p {
+  color: #2F2E41;
+  margin-top: 8px;
+  font-weight: 600;
+}
